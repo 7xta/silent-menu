@@ -23,13 +23,7 @@ import tqdm
 import pyfiglet
 import string
 
-import sys
-import os
-import shutil
-import configparser
-import re
-import requests
-SCRIPT_URL = "https://github.com/7xta/silent-menu"
+SCRIPT_URL = "https://raw.githubusercontent.com/7xta/silent-menu/main/silentmenu.py"
 LOCAL_SCRIPT = os.path.join(os.path.dirname(__file__), "silentmenu.py")
 
 def check_update_and_run():
@@ -54,7 +48,7 @@ def check_update_and_run():
             print("update found, updating local script...")
             with open(LOCAL_SCRIPT, "w", encoding="utf-8") as f:
                 f.write(remote_data)
-            print("update done, restarting index.js...")
+            print("update done, restarting silentmenu.py...")
             subprocess.Popen([sys.executable, LOCAL_SCRIPT], stdout=sys.stdout, stderr=sys.stderr)
             sys.exit(0)
         else:
