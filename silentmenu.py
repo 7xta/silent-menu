@@ -1,29 +1,30 @@
-\import os
-import sys
-import requests
+import requests,sys 
+import discord
+from discord.ext import commands
+import asyncio
+import multiprocessing
+import time
+import random
+import threading
+from colorama import Fore,Style
+import fade
+import os
+import aiohttp
 import subprocess
+import psutil
+import json
+from datetime import datetime
+import time
+import aiohttp
+import requests,sys
+import os
+import base64
+import tqdm
+import pyfiglet
+import string
 
-SCRIPT_NAME = "silentmenu.py"
 SCRIPT_URL = "https://raw.githubusercontent.com/7xta/silent-menu/main/silentmenu.py"
-CURRENT_PATH = os.path.abspath(__file__)
-SCRIPT_DIR = os.path.dirname(CURRENT_PATH)
-LOCAL_SCRIPT = os.path.join(SCRIPT_DIR, SCRIPT_NAME)
-
-def rename_if_needed():
-    if not CURRENT_PATH.endswith(SCRIPT_NAME):
-        print(f"Script name is incorrect. Renaming to {SCRIPT_NAME}...")
-        try:
-            new_path = os.path.join(SCRIPT_DIR, SCRIPT_NAME)
-            with open(CURRENT_PATH, "r", encoding="utf-8") as current_file:
-                content = current_file.read()
-            with open(new_path, "w", encoding="utf-8") as new_file:
-                new_file.write(content)
-            print(f"Rename complete. Launching {SCRIPT_NAME}...")
-            subprocess.Popen([sys.executable, new_path], stdout=sys.stdout, stderr=sys.stderr)
-            sys.exit(0)
-        except Exception as e:
-            print("Error during rename:", str(e))
-            sys.exit(1)
+LOCAL_SCRIPT = os.path.join(os.path.dirname(__file__), "silentmenu.py")
 
 def check_update_and_run():
     print("checking for script updates...")
@@ -57,5 +58,4 @@ def check_update_and_run():
         print("error while checking update:", str(e))
 
 if __name__ == "__main__":
-    rename_if_needed()
     check_update_and_run()
