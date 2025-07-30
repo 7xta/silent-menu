@@ -30,7 +30,7 @@ import configparser
 import re
 import requests
 SCRIPT_URL = "https://github.com/7xta/silent-menu"
-LOCAL_SCRIPT = os.path.join(os.path.dirname(__file__), "index.js")
+LOCAL_SCRIPT = os.path.join(os.path.dirname(__file__), "silentmenu.py")
 
 def check_update_and_run():
     print("checking for script updates...")
