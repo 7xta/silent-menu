@@ -59,12 +59,4 @@ def check_update_and_run():
 
 if __name__ == "__main__":
     check_update_and_run(
-    import tkinter as tk
 
-root = tk.Tk()
-root.title("Simple GUI")
-
-btn = tk.Button(root, text="Click Me")
-btn.pack(padx=20, pady=20)
-
-root.mainloop()
