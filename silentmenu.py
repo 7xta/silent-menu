@@ -22,6 +22,7 @@ import base64
 import tqdm
 import pyfiglet
 import string
+import tkinter as tk
 
 SCRIPT_URL = "https://raw.githubusercontent.com/7xta/silent-menu/main/silentmenu.py"
 LOCAL_SCRIPT = os.path.join(os.path.dirname(__file__), "silentmenu.py")
@@ -59,3 +60,12 @@ def check_update_and_run():
 
 if __name__ == "__main__":
     check_update_and_run()
+
+
+    root = tk.Tk()
+root.title("Simple GUI")
+
+btn = tk.Button(root, text="Click Me")
+btn.pack(padx=20, pady=20)
+
+root.mainloop()
