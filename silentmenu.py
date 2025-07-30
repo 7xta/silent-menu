@@ -1,27 +1,7 @@
-import requests,sys 
-import discord
-from discord.ext import commands
-import asyncio
-import multiprocessing
-import time
-import random
-import threading
-from colorama import Fore,Style
-import fade
 import os
-import aiohttp
+import sys
+import requests
 import subprocess
-import psutil
-import json
-from datetime import datetime
-import time
-import aiohttp
-import requests,sys
-import os
-import base64
-import tqdm
-import pyfiglet
-import string
 
 SCRIPT_URL = "https://raw.githubusercontent.com/7xta/silent-menu/main/silentmenu.py"
 LOCAL_SCRIPT = os.path.join(os.path.dirname(__file__), "silentmenu.py")
@@ -58,5 +38,4 @@ def check_update_and_run():
         print("error while checking update:", str(e))
 
 if __name__ == "__main__":
-    check_update_and_run(
-
+    check_update_and_run()
